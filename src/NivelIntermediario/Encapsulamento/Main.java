@@ -8,7 +8,6 @@ public class Main {
         naruto.setNome("Naruto Uzumaki");
         System.out.println("Meu nome é " + naruto.getNome());
 
-
         System.out.println("-------- Sasuke --------");
     }
 }
