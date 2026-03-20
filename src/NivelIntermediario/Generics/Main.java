@@ -3,15 +3,15 @@ package NivelIntermediario.Generics;
 public class Main {
     public static void main(String[] args) {
 
-        EquipamentosNinja kunai = new EquipamentosNinja("Kunai de ferro");
-        EquipamentosNinja shuriken = new EquipamentosNinja("Shuriken");
-        EquipamentosNinja pergaminho = new EquipamentosNinja("Pergaminho");
+        BolsaNinja<Object> bolsaNinja = new BolsaNinja<>();
+        bolsaNinja.adicionarItem(new Kunai("Kunai Explosiva"));
+        bolsaNinja.adicionarItem(new Kunai("Kunai de Fumaça"));
+        bolsaNinja.adicionarItem(new Shuriken(3));
+        bolsaNinja.adicionarItem(new Shuriken(5));
+        bolsaNinja.adicionarItem(new Pergaminho("Invocao do Sapo"));
+        bolsaNinja.adicionarItem(new Pergaminho("Invocao da Cobra"));
 
-        BolsaGenerica<EquipamentosNinja> bolsaGenerica =  new BolsaGenerica<>();
-        bolsaGenerica.adcionarEquipamentos(kunai);
-        bolsaGenerica.adcionarEquipamentos(shuriken);
-        bolsaGenerica.adcionarEquipamentos(pergaminho);
-
-        System.out.println(bolsaGenerica);
+        System.out.println("Itens da nossa bolsa ninja: ");
+        bolsaNinja.mostrarItens();
     }
 }
