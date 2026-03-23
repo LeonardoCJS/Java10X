@@ -36,6 +36,12 @@ public class Main {
         ninjasList.set(3, "Hashirama Senju");
         System.out.println("ninjasList = " + ninjasList);
 
+        ninjasList.add(3, "Tobirama");
+        System.out.println("ninjasList = " + ninjasList);
+
+        ninjasList.remove(3);
+        System.out.println("ninjasList = " + ninjasList);
+
         // Ver o tamanho da Lista
         System.out.println("Tamanho Lista = " + ninjasList.size() + " elementos");
     }
